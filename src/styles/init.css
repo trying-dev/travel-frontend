@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+  font-size: 28px;
+}
+
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+textarea {
+  resize: vertical;
+  overflow: hidden;
+  line-height: 1;
+}
+
+/* Opcionales */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
