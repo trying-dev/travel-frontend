@@ -82,6 +82,33 @@ const top_vacation = [
   },
 ];
 
+const offers = [
+  {
+    id: 1,
+    img: "/assets/images/offers_img1.png",
+    company: "Domestic Flights",
+    description: "Huge savings on flight with trxl.",
+    comment: "Book domestic flights starting @just 1459",
+    link: "#",
+  },
+  {
+    id: 2,
+    img: "/assets/images/offers_img2.png",
+    company: "International Hotels",
+    description: "Enjoy upto 20% off on International Hotels",
+    comment: "Make the most of this deal on your first booking with trxvl.",
+    link: "#",
+  },
+  {
+    id: 3,
+    img: "/assets/images/offers_img1.png",
+    company: "Domestic Flights",
+    description: "Huge savings on flight with trxl.",
+    comment: "Book domestic flights starting @just 1459",
+    link: "#",
+  },
+];
+
 const Home: NextPage = () => {
   return (
     <div className="relative text-white flex justify-center my-20 font-">
@@ -131,9 +158,7 @@ const Home: NextPage = () => {
             className="
                   
                   flex flex-col justify-start items-start
-                  gap-10
-                  h-screen  p-[120px]
-                  bg-hero-pattern bg-contain bg-no-repeat
+                  gap-10 p-[120px]
                   "
           >
             <div className="z-0 w-[580px] mt-1 text-7xl font-bold ">
@@ -233,7 +258,7 @@ const Home: NextPage = () => {
             </div>
 
             {/* Top Vacation destination */}
-            <div className="relative w-full">
+            <div className="relative w-full h-[270px]">
               <div className="z-0 absolute flex flex-col gap-8 w-auto">
                 <div className="z-0 font-semibold text-3xl w-auto">
                   Top Vacation Destinations
@@ -259,6 +284,47 @@ const Home: NextPage = () => {
                     );
                   })}
                 </div>
+              </div>
+            </div>
+
+            {/* Offers */}
+            <div className="z-0 relative flex flex-col gap-8 ">
+              <div className=" font-semibold text-black text-3xl w-auto">
+                Offers
+              </div>
+              <div className="flex gap-5">
+                {offers.map(({ id, company, description, comment, img }) => (
+                  <div
+                    className="flex gap-6 p-6 w-[680px]  text-black rounded-2xl shadow-md cursor-pointer transition-all duration-500 
+                    hover:scale-105"
+                    key={id}
+                  >
+                    <div className="w-[310px] h-[210px] overflow-hidden rounded-lg">
+                      <Image src={img} alt="" width={310} height={210} />
+                    </div>
+                    <div className="flex flex-col  justify-between ">
+                      <div>
+                        <div className="text-base">{company}</div>
+                        <div className="text-2xl font-semibold">
+                          {description}
+                        </div>
+                        <div className="text-base">{comment}</div>
+                      </div>
+
+                      <button
+                        className="
+                              bg-[#2659C3] p-4   w-[140px] 
+                              text-white text-base rounded-full
+                                shadow-md
+                                cursor-pointer transition-all duration-500 
+                                hover:scale-105 hover:shadow-lg
+                                "
+                      >
+                        Book now
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
