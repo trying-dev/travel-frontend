@@ -92,36 +92,61 @@ const Home: NextPage = () => {
       </Head>
 
       <div className=" relative w-[1366px]">
-        <header className="absolute flex justify-between items-center px-10 w-full py-6 ">
-          <div className="text-3xl font-bold">trxvl.</div>
+        <header className="z-10 absolute flex justify-between items-center px-10 w-full py-6 ">
+          <div className="text-3xl font-bold cursor-pointer">trxvl.</div>
           <nav className="flex gap-5 items-center mr-10 text-lg font-light ">
-            <div className="border-blue-100">Home</div>
-            <div>Stays</div>
-            <div>Flights</div>
-            <div>Packages</div>
-            <div>Sing Up</div>
+            <div className="border-blue-100 cursor-pointer transition-all hover:scale-105">
+              Home
+            </div>
+            <div className="cursor-pointer transition-all hover:scale-105">
+              Stays
+            </div>
+            <div className="cursor-pointe transition-all hover:scale-105">
+              Flights
+            </div>
+            <div className="cursor-pointer transition-all hover:scale-105">
+              Packages
+            </div>
+            <div className="cursor-pointer transition-all hover:scale-105">
+              Sing Up
+            </div>
           </nav>
         </header>
 
-        <main className="overflow-hidden">
+        <main className="overflow-hidden ">
+          {/* Imagen de fondo */}
+          <div className="absolute top-0 z-0 ">
+            <div className="relative">
+              <Image
+                src="/assets/images/image1.png"
+                alt=""
+                width={1366}
+                height={841}
+              />
+              <div className="absolute bottom-0 w-[1366px] h-28 bg-gradient-to-t from-white via-white  to-transparent" />
+            </div>
+          </div>
+
           <section
             className="
+                  
                   flex flex-col justify-start items-start
                   gap-10
                   h-screen  p-[120px]
                   bg-hero-pattern bg-contain bg-no-repeat
                   "
           >
-            <div className="w-[580px] mt-1 text-7xl font-bold ">
+            <div className="z-0 w-[580px] mt-1 text-7xl font-bold ">
               The Whole world awaits.
             </div>
+            {/* Formulario ... */}
             <form
               action=""
               className="
-            flex  justify-between items-center px-6 
-            w-full
-            h-[60px] bg-gris-trasparent
-            rounded-2xl"
+                  flex  justify-between items-center px-6 
+                  w-full z-0
+                  h-[60px] bg-gris-trasparent
+                  rounded-2xl"
             >
               <div className="flex items-center ">
                 <Image
@@ -190,14 +215,17 @@ const Home: NextPage = () => {
             </form>
 
             {/* Top Categories */}
-            <div className="flex flex-col  gap-10 mb-4">
+            <div className="z-0 flex flex-col  gap-10 mb-4">
               <div className="font-semibold text-3xl">Top categories</div>
-              <div className="flex gap-14">
+              <div className="flex gap-[55px]">
                 {data.map(({ id, img, title }) => {
                   return (
-                    <div key={id} className="flex flex-col items-center">
+                    <div
+                      key={id}
+                      className="flex flex-col items-center cursor-pointer transition-all hover:scale-105"
+                    >
                       <Image src={img} alt="" width={50} height={50} />
-                      <div className="text-base font-light">{title}</div>
+                      <div className=" text-base font-light">{title}</div>
                     </div>
                   );
                 })}
@@ -206,14 +234,17 @@ const Home: NextPage = () => {
 
             {/* Top Vacation destination */}
             <div className="relative w-full">
-              <div className="absolute flex flex-col gap-8 w-auto">
-                <div className="font-semibold text-3xl w-auto">
+              <div className="z-0 absolute flex flex-col gap-8 w-auto">
+                <div className="z-0 font-semibold text-3xl w-auto">
                   Top Vacation Destinations
                 </div>
                 <div className="flex gap-5">
                   {top_vacation.map(({ id, img, city, country }) => {
                     return (
-                      <div key={id} className="relative w-[310px] h-[200px]">
+                      <div
+                        key={id}
+                        className="relative w-[310px] h-[200px] cursor-pointer transition-all duration-500 hover:scale-105"
+                      >
                         <Image
                           src={img}
                           alt="australia"
