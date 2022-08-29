@@ -55,6 +55,33 @@ const data = [
   },
 ];
 
+const top_vacation = [
+  {
+    id: 1,
+    img: "/assets/images/indenosia.png",
+    city: "Bali",
+    country: "Indonesia",
+  },
+  {
+    id: 2,
+    img: "/assets/images/ireland.png",
+    city: "Kerry",
+    country: "Ireland",
+  },
+  {
+    id: 3,
+    img: "/assets/images/australia.png",
+    city: "Sydney",
+    country: "Australia",
+  },
+  {
+    id: 4,
+    img: "/assets/images/france.png",
+    city: "Paris",
+    country: "France",
+  },
+];
+
 const Home: NextPage = () => {
   return (
     <div className="relative text-white flex justify-center my-20 font-">
@@ -76,23 +103,15 @@ const Home: NextPage = () => {
           </nav>
         </header>
 
-        <main className="">
+        <main className="overflow-hidden">
           <section
             className="
-                  box-content
                   flex flex-col justify-start items-start
                   gap-10
                   h-screen  p-[120px]
                   bg-hero-pattern bg-contain bg-no-repeat
                   "
           >
-            {/* <Image
-            src="/assets/images/image1.png"
-            alt=""
-            width="100%"
-            height="100%"
-            layout="fill"
-          /> */}
             <div className="w-[580px] mt-1 text-7xl font-bold ">
               The Whole world awaits.
             </div>
@@ -169,8 +188,10 @@ const Home: NextPage = () => {
                 </button>
               </div>
             </form>
-            <div className="flex flex-col  gap-10">
-              <div className="font-semibold text-4xl">Top categories</div>
+
+            {/* Top Categories */}
+            <div className="flex flex-col  gap-10 mb-4">
+              <div className="font-semibold text-3xl">Top categories</div>
               <div className="flex gap-14">
                 {data.map(({ id, img, title }) => {
                   return (
@@ -180,6 +201,33 @@ const Home: NextPage = () => {
                     </div>
                   );
                 })}
+              </div>
+            </div>
+
+            {/* Top Vacation destination */}
+            <div className="relative w-full">
+              <div className="absolute flex flex-col gap-8 w-auto">
+                <div className="font-semibold text-3xl w-auto">
+                  Top Vacation Destinations
+                </div>
+                <div className="flex gap-5">
+                  {top_vacation.map(({ id, img, city, country }) => {
+                    return (
+                      <div key={id} className="relative w-[310px] h-[200px]">
+                        <Image
+                          src={img}
+                          alt="australia"
+                          width={310}
+                          height={200}
+                          className=" rounded-md w-[310px] h-[200px]"
+                        />
+                        <div className="absolute bottom-7 left-6">
+                          {city}, {country}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </section>
