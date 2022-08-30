@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/assets/images/image1.png')",
-        "footer-texture": "url('/img/footer-texture.png')",
+        "hero-map-trip": "url('/assets/images/map_trip.png')",
       },
       colors: {
         "gris-trasparent": "rgba(255, 255, 255, 0.5)",

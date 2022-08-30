@@ -356,7 +356,9 @@ const Home: NextPage = () => {
 
             {/* Browse property */}
             <div className="z-0 flex flex-col  gap-10 mb-4">
-              <div className="font-semibold text-3xl">Top categories</div>
+              <div className="font-semibold text-3xl text-black">
+                Browse by property type
+              </div>
               <div className="flex gap-[55px]">
                 {browse_type.map(({ id, name, img }) => (
                   <div
@@ -376,6 +378,14 @@ const Home: NextPage = () => {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Plan trip */}
+            <div className="flex flex-col gap-6 p-20 h-[400px] w-full bg-hero-map-trip rounded-3xl">
+              <p className="w-[640px] text-[56px] leading-[64.39px] font-semibold">
+                Plan your trip with travel expert
+              </p>
+              <p>Our professional advisors can craft your perfect itinerary</p>
             </div>
           </section>
         </main>
