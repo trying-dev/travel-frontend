@@ -136,6 +136,37 @@ const browse_type = [
   },
 ];
 
+const other_trip = [
+  {
+    id: 1,
+    title: "India",
+    coment: "Travel community",
+    travelers: 155073,
+    img: "/assets/images/other_img1.png",
+  },
+  {
+    id: 2,
+    title: "Travel Talk",
+    coment: "Travel community",
+    travelers: 155073,
+    img: "/assets/images/other_img2.png",
+  },
+  {
+    id: 3,
+    title: "Beach",
+    coment: "Travel community",
+    travelers: 155073,
+    img: "/assets/images/other_img3.png",
+  },
+  {
+    id: 4,
+    title: "Mountains",
+    coment: "Travel community",
+    travelers: 155073,
+    img: "/assets/images/other_img4.png",
+  },
+];
+
 const Home: NextPage = () => {
   return (
     <div className="relative text-white flex justify-center my-20 font-">
@@ -363,7 +394,7 @@ const Home: NextPage = () => {
                 {browse_type.map(({ id, name, img }) => (
                   <div
                     key={id}
-                    className="relative transition-all duration-500 hover:scale-105 hover:shadow-sm"
+                    className="relative transition-all duration-500 hover:scale-105 hover:shadow-sm cursor-pointer"
                   >
                     <div>
                       <Image
@@ -386,6 +417,34 @@ const Home: NextPage = () => {
                 Plan your trip with travel expert
               </p>
               <p>Our professional advisors can craft your perfect itinerary</p>
+            </div>
+
+            {/* Connect with other travelers */}
+            <div className="text-black">
+              <p className=" font-semibold">
+                Connect with travelers in our community
+              </p>
+              <div className="flex gap-6 ">
+                {other_trip.map(({ id, title, coment, travelers, img }) => (
+                  <div
+                    key={id}
+                    className="p-4 rounded-2xl shadow-md transition-all hover:scale-105 cursor-pointer "
+                  >
+                    <div className="w-[310px] h-[200px] rounded-lg ">
+                      <Image
+                        className="rounded-lg"
+                        src={img}
+                        alt=""
+                        width={310}
+                        height={200}
+                      />
+                    </div>
+                    <p className="text-2xl">{title}</p>
+                    <p className="text-base">{coment}</p>
+                    <p className="text-base">{travelers} travelers</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
         </main>
