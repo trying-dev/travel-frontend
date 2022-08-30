@@ -109,6 +109,33 @@ const offers = [
   },
 ];
 
+const browse_type = [
+  {
+    id: 1,
+    name: "Hotels",
+    img: "/assets/images/hotels.png",
+    link: "#",
+  },
+  {
+    id: 2,
+    name: "Apartments",
+    img: "/assets/images/apartments.png",
+    link: "#",
+  },
+  {
+    id: 3,
+    name: "Resorts",
+    img: "/assets/images/resorts.png",
+    link: "#",
+  },
+  {
+    id: 4,
+    name: "Villas",
+    img: "/assets/images/villas.png",
+    link: "#",
+  },
+];
+
 const Home: NextPage = () => {
   return (
     <div className="relative text-white flex justify-center my-20 font-">
@@ -156,7 +183,6 @@ const Home: NextPage = () => {
 
           <section
             className="
-                  
                   flex flex-col justify-start items-start
                   gap-10 p-[120px]
                   "
@@ -296,7 +322,7 @@ const Home: NextPage = () => {
                 {offers.map(({ id, company, description, comment, img }) => (
                   <div
                     className="flex gap-6 p-6 w-[680px]  text-black rounded-2xl shadow-md cursor-pointer transition-all duration-500 
-                    hover:scale-105"
+                    hover:scale-[1.015]"
                     key={id}
                   >
                     <div className="w-[310px] h-[210px] overflow-hidden rounded-lg">
@@ -323,6 +349,30 @@ const Home: NextPage = () => {
                         Book now
                       </button>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Browse property */}
+            <div className="z-0 flex flex-col  gap-10 mb-4">
+              <div className="font-semibold text-3xl">Top categories</div>
+              <div className="flex gap-[55px]">
+                {browse_type.map(({ id, name, img }) => (
+                  <div
+                    key={id}
+                    className="relative transition-all duration-500 hover:scale-105 hover:shadow-sm"
+                  >
+                    <div>
+                      <Image
+                        className="rounded-lg "
+                        src={img}
+                        alt={name}
+                        width={310}
+                        height={200}
+                      />
+                    </div>
+                    <div className="absolute bottom-6 left-6 ">{name}</div>
                   </div>
                 ))}
               </div>
