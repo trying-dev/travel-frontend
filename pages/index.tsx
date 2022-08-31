@@ -447,6 +447,72 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
+
+          {/* ultima parte home */}
+          <div className="grid grid-cols-[270px_1fr] gap-20 pt-[70px] px-[130px] h-[540px] bg-hero-last-home">
+            {/* Lateral izquierdo */}
+            <div className="w-[260px] h-[580px]">
+              <Image
+                src="/assets/images/mockup-app.png"
+                alt=""
+                width={260}
+                height={580}
+              />
+            </div>
+            {/* Lateral derecho */}
+            <div>
+              <p className="text-5xl font-semibold">
+                Your all-in-one travel app.
+              </p>
+              <p className="text-2xl mt-6 mb-10 w-[780px]">
+                Book flights, hotels, trains & rental cars anywhewre in the word
+                in just seconds. Get real-time flight updates, travel info,
+                exclusive details, and 30% more Trip Coins on the app!
+              </p>
+              {/* Parte baja */}
+              <div className="flex justify-between w">
+                <div className="flex flex-col gap-4">
+                  <div className=" flex items-center gap-6 mb-4 text-xl">
+                    <p className="bg-gris-trasparent py-2 px-4 rounded-2xl cursor-pointer">
+                      Mobile
+                    </p>
+                    <p className="cursor pinter"> Email</p>
+                  </div>
+                  <p className="text-sm">
+                    Enter your phone number to recive a text with a link to
+                    download the app.
+                  </p>
+                  <div className="relative w-[460px]">
+                    <input
+                      type="number"
+                      placeholder="+91 Movile number"
+                      className="px-4 w-full h-[60px] bg-gris-trasparent placeholder:text-white text-base rounded-2xl"
+                    />
+                    <button className="absolute top-[6px] right-4 py-3 px-16 bg-white text-base text-[#2659C3] font-semibold rounded-full cursor-pointer">
+                      Search
+                    </button>
+                  </div>
+                </div>
+                <div className="relative flex justify-center items-center w-1 after:content-[''] after:absolute after:top-[0px] after:w-[1px] after:h-[70px] after:text-center  after:bg-white before:content-[''] before:absolute before:-bottom-[10px] before:w-[1px] before:h-[70px] before:text-center  before:bg-white">
+                  or
+                </div>
+                <div className="flex flex-col justify-center items-center gap-4">
+                  <Image
+                    src="/assets/images/download-app-google.png"
+                    alt="Download Google play"
+                    width={200}
+                    height={60}
+                  />
+                  <Image
+                    src="/assets/images/download-app-store.png"
+                    alt="download app store"
+                    width={200}
+                    height={60}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </div>
