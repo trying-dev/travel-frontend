@@ -71,18 +71,6 @@ export const Layout = ({ children }: any) => {
         >
           <div className="relative  w-full h-28 bg-gradient-to-t from-white via-white  to-transparent" />
         </div>
-        {/* Imagen de fondo */}
-        {/*         <div className="absolute top-0 z-[0] ">
-          <div className="relative">
-            <Image
-              src="/assets/images/image1.png"
-              alt=""
-              width={1366}
-              height={841}
-            />
-            <div className="absolute bottom-0 w-[1366px] h-28 bg-gradient-to-t from-white via-white  to-transparent" />
-          </div>
-        </div> */}
 
         <section
           className="
@@ -95,77 +83,6 @@ export const Layout = ({ children }: any) => {
           </div>
 
           {/* Formulario ... */}
-
-          {/*           <form
-            action=""
-            
-          >
-            <div className="flex items-center ">
-              <Image
-                src="/assets/svg/search.svg"
-                alt=""
-                width={32}
-                height={32}
-              />
-              <input
-                type="text"
-                className="px-2 w-80 h-[44px] bg-transparent text-lg placeholder:text-white"
-                placeholder="search destinations, hotels"
-              />
-            </div>
-            <div className="flex gap-8 items-center">
-              <div className="flex items-center ">
-                <Image
-                  src="/assets/svg/akar-icons_calendar.svg"
-                  alt=""
-                  width={32}
-                  height={32}
-                />
-                <input
-                  type="text"
-                  className="px-2 w-40 h-[44px] bg-transparent text-lg placeholder:text-white"
-                  placeholder="Check in"
-                />
-              </div>
-              <div className="flex items-center ">
-                <Image
-                  src="/assets/svg/akar-icons_calendar.svg"
-                  alt=""
-                  width={32}
-                  height={32}
-                />
-                <input
-                  type="text"
-                  className="px-2 w-40 h-[44px] bg-transparent text-lg placeholder:text-white"
-                  placeholder="check out"
-                />
-              </div>
-              <div className="flex items-center ">
-                <Image
-                  src="/assets/svg/fontisto_male.svg"
-                  alt=""
-                  width={32}
-                  height={32}
-                />
-                <input
-                  type="text"
-                  className="px-2 w-40 h-[44px] bg-transparent text-lg placeholder:text-white"
-                  placeholder="1 room, 2 adults"
-                />
-              </div>
-              <button
-                type="submit"
-                className="
-              flex justify-center
-              items-center px-8 
-              py-5 h-8 bg-white 
-              text-blue-600 text-base rounded-3xl"
-              >
-                Search
-              </button>
-            </div>
-          </form> */}
-
           <form
             action=""
             className="
