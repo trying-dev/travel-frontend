@@ -67,7 +67,7 @@ export const Layout = ({ children }: any) => {
           className="
               absolute flex items-end
               bg-hero-pattern bg-cover bg-no-repeat w-full 
-              h-[470px] border-transparent"
+              h-[470px] lg:h-[841px] border-transparent"
         >
           <div className="relative  w-full h-28 bg-gradient-to-t from-white via-white  to-transparent" />
         </div>
@@ -87,10 +87,10 @@ export const Layout = ({ children }: any) => {
         <section
           className="
               flex flex-col justify-start items-start
-              gap-5 p-6 pt-[80px] xl:p-[120px] pb-10 w-full
+              gap-5 p-6 pt-[80px] lg:p-[50px] xl:p-[125px] pb-10 w-full
               "
         >
-          <div className="z-0 w-[270px] xl:w-[580px] mt-1 text-2xl xl:text-7xl font-bold ">
+          <div className="z-0 w-[270px] lg:w-[580px] mt-1 lg:mb-[40px] text-2xl lg:text-7xl font-bold ">
             The Whole world awaits.
           </div>
 
@@ -98,11 +98,7 @@ export const Layout = ({ children }: any) => {
 
           {/*           <form
             action=""
-            className="
-              flex  justify-between items-center px-6 
-              w-full z-0
-              h-[60px] bg-gris-trasparent
-              rounded-2xl"
+            
           >
             <div className="flex items-center ">
               <Image
@@ -173,12 +169,17 @@ export const Layout = ({ children }: any) => {
           <form
             action=""
             className="
-              flex flex-col gap-4 justify-between items-center 
-              w-full z-0
+                relative box-content
+                w-full z-0 flex flex-col
+                gap-4 justify-between items-center  
+                lg:flex-row lg:bg-gris-trasparent 
+                lg:rounded-2xl lg:h-[66px] lg:px-6
+              
               "
           >
-            <div className="flex items-center w-full bg-gris-trasparent rounded-full">
-              <div className="relative left-9 top-1">
+            {/* Search */}
+            <div className="relative flex items-center w-full bg-gris-trasparent rounded-full lg:rounded-none lg:bg-transparent">
+              <div className="absolute left-2 top-2">
                 <Image
                   src="/assets/svg/search.svg"
                   alt=""
@@ -192,54 +193,67 @@ export const Layout = ({ children }: any) => {
                 placeholder="search destinations, hotels"
               />
             </div>
-            <div className="flex flex-col gap-4 items-center w-full">
-              <div className="flex  px-10 justify-between w-full bg-gris-trasparent rounded-full">
-                <div className="flex items-center ">
-                  <Image
-                    src="/assets/svg/akar-icons_calendar.svg"
-                    alt=""
-                    width={32}
-                    height={32}
-                  />
+            {/* Options */}
+            <div className="flex flex-col gap-4 items-center w-full lg:flex-row lg:w-auto">
+              {/* Checks */}
+              <div className="flex  px-10 lg:p-0 justify-between lg:justify-end w-full bg-gris-trasparent rounded-full lg:rounded-none lg:bg-transparent ">
+                <div className="relative flex items-center ">
+                  <div className="absolute left-1 w-[32px] h-[32px]">
+                    <Image
+                      src="/assets/svg/akar-icons_calendar.svg"
+                      alt=""
+                      width={32}
+                      height={32}
+                    />
+                  </div>
                   <input
                     type="text"
-                    className="px-2 w-24 h-[44px] bg-transparent text-lg placeholder:text-white"
+                    className="px-2 pl-10 w-40 h-[44px] bg-transparent text-lg placeholder:text-white lg:w-[135px]"
                     placeholder="Check in"
                   />
                 </div>
-                <div className="flex items-center  ">
-                  <Image
-                    src="/assets/svg/akar-icons_calendar.svg"
-                    alt=""
-                    width={32}
-                    height={32}
-                  />
+                <div className="relative flex items-center  ">
+                  <div className="absolute left-1 w-[32px] h-[32px]">
+                    <Image
+                      src="/assets/svg/akar-icons_calendar.svg"
+                      alt=""
+                      width={32}
+                      height={32}
+                    />
+                  </div>
                   <input
                     type="text"
-                    className="px-2 w-24 h-[44px] bg-transparent text-lg placeholder:text-white"
+                    className="px-2 pl-10 w-40 h-[44px] bg-transparent text-lg placeholder:text-white lg:w-[135px]"
                     placeholder="check out"
                   />
                 </div>
               </div>
-              <div className="flex justify-center items-center  w-full bg-gris-trasparent rounded-full">
-                <Image
-                  src="/assets/svg/fontisto_male.svg"
-                  alt=""
-                  width={32}
-                  height={32}
-                />
-                <input
-                  type="text"
-                  className="px-2 w-40 h-[44px] bg-transparent text-lg placeholder:text-white"
-                  placeholder="1 room, 2 adults"
-                />
+
+              {/* others */}
+              <div className=" flex justify-center items-center lg:justify-start w-full lg:w-auto bg-gris-trasparent rounded-full lg:rounded-none lg:bg-transparent">
+                <div className="relative">
+                  <div className="absolute left-1 top-2 w-[32px] h-[32px]">
+                    <Image
+                      src="/assets/svg/fontisto_male.svg"
+                      alt=""
+                      width={32}
+                      height={32}
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    className="px-2 pl-10 h-[44px] bg-transparent text-lg placeholder:text-white lg:w-[190px] "
+                    placeholder="1 room, 2 adults"
+                  />
+                </div>
               </div>
               <button
                 type="submit"
                 className="
                   flex justify-center items-center
                   p-3 w-full text-base font-bold
-                  bg-blue-600 rounded-full
+                  bg-blue-600 rounded-full 
+                  lg:px-8 lg:bg-white lg:text-blue-600 lg:w-auto
                 "
               >
                 Search
@@ -252,7 +266,7 @@ export const Layout = ({ children }: any) => {
             <div className="z-[1] font-semibold text-3xl text-black">
               Top categories
             </div>
-            <div className="flex gap-6 xl:gap-[55px] ">
+            <div className="flex gap-6 lg:gap-[55px] ">
               {data.map(({ id, img, title }) => {
                 return (
                   <div
@@ -260,7 +274,7 @@ export const Layout = ({ children }: any) => {
                     className="flex flex-col items-center gap-3 w-max cursor-pointer transition-all hover:scale-105"
                   >
                     <Image src={img} alt="" width={32} height={32} />
-                    <div className=" text-sm xl:text-base font-light text-[#808080]">
+                    <div className=" text-sm lg:text-base font-light text-[#808080]">
                       {title}
                     </div>
                   </div>
