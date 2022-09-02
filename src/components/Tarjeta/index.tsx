@@ -1,10 +1,9 @@
 import Image from "next/image";
 
 export const Tarjeta = ({ info }: any) => {
-  console.log("info ::", info);
   return (
     <div className=" relative flex flex-col items-center gap-6 p-4 w-[345px] h-[550] bg-white shadow-lg text-black rounded-lg">
-      <div className="w-[310] h-[200] self-center">
+      <div className="relative w-[310] h-[200] self-center">
         <Image
           src={info.img}
           alt={info.name}
@@ -12,6 +11,14 @@ export const Tarjeta = ({ info }: any) => {
           height={200}
           className="rounded-lg"
         />
+        <div className="z-0 absolute top-0 right-2 cursor-pointer">
+          <Image
+            src="/assets/svg/heart.svg"
+            alt="heart"
+            width={24}
+            height={24}
+          />
+        </div>
       </div>
       <div className="flex flex-col self-stretch">
         <div className="flex justify-between">
@@ -52,7 +59,6 @@ export const Tarjeta = ({ info }: any) => {
       <div>
         <ul className="text-base list-disc text-[#808080]">
           {info.descriptions.map((description: string) => {
-            console.log(description);
             return <li key={Math.random()}>{description}</li>;
           })}
         </ul>
