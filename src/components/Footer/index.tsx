@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <footer className="flex gap-[125px] py-[42px] px-[120px] bg-black text-[13px] text-[#808080]">
+    <footer className="hidden  sm:flex gap-[125px] py-[42px] px-[120px] bg-black text-[13px] text-[#808080]">
       <p className="text-[32px] font-bold text-white">Trxvl.</p>
       <div className="flex flex-col gap-[20px]">
         <div className="flex gap-[165px] ">
