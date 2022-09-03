@@ -4,10 +4,6 @@ import { useEffect, useState } from "react";
 export const Header = () => {
   const [active, setActive] = useState(false);
 
-  useEffect(() => {
-    // setActive(!active);
-  }, [active]);
-
   const menuSwitch = () => {
     setActive(!active);
   };
@@ -35,11 +31,14 @@ export const Header = () => {
         <div
           className={` 
 
-          overflow-hidden
+            overflow-hidden
             box-content  absolute -top-6 
             -left-${active ? "6" : "full"} 
+
             p-${active ? "4" : "0"} 
+
             w-${active ? "screen" : "0"} 
+
             h-screen bg-blue-300 text-black 
             font-bold transition-all duration-500
             lg:relative lg:top-auto lg:left-0 lg:text-white lg:bg-transparent lg:w-full lg:h-auto

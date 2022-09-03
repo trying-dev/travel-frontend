@@ -385,7 +385,7 @@ export const Categori = () => {
           {recent_viewed.map((tarjeta) => {
             return <Tarjeta key="" info={tarjeta} />;
           })}
-          <div className=" relative flex flex-col items-start gap-4 p-4 w-[345px] h-[550x] bg-mountains-blue bg-no-repeat bg-cover shadow-lg text-white rounded-lg">
+          <div className=" relative flex flex-col items-start gap-4 p-4 w-[345px] h-[550x] bg-montains-blue-card bg-no-repeat bg-cover shadow-lg text-white rounded-lg">
             <p className="text-2xl">Summer Bonanza!</p>
             <p className="text-base">
               Enjoy confortable transfers in shared coaches

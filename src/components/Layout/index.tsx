@@ -53,7 +53,7 @@ const data = [
   },
   {
     id: 10,
-    img: "/assets/svg/palmera.svg",
+    img: "/assets/svg/palmera_tropical.svg",
     title: "tropical",
   },
 ];
@@ -180,7 +180,7 @@ export const Layout = ({ children }: any) => {
 
           {/* Top Categories */}
           <div className="z-0 flex flex-col  gap-10 mb-4">
-            <div className="z-[1] font-semibold text-3xl text-black">
+            <div className="z-[1] font-semibold text-3xl text-black lg:text-white">
               Top categories
             </div>
             <div className="flex gap-6 lg:gap-[55px] ">
@@ -202,8 +202,7 @@ export const Layout = ({ children }: any) => {
           {children}
         </section>
       </main>
-
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

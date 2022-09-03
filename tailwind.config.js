@@ -7,6 +7,7 @@ module.exports = {
         "hero-pattern": "url('/assets/images/image1.png')",
         "hero-map-trip": "url('/assets/images/map_trip.png')",
         "mountains-blue": "url('/assets/images/mountains-blue.png')",
+        "montains-blue-card": "url('/assets/images/montains-blue-card.png')",
       },
       colors: {
         "gris-trasparent": "rgba(255, 255, 255, 0.5)",
