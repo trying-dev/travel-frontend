@@ -1,6 +1,5 @@
 import { Footer } from "@components/Footer";
 import { Header } from "@components/Header";
-import { Tarjeta } from "@components/Tarjeta";
 
 import Image from "next/image";
 import { Children } from "react";
@@ -188,10 +187,12 @@ export const Layout = ({ children }: any) => {
                 return (
                   <div
                     key={id}
-                    className="flex flex-col items-center gap-3 w-max cursor-pointer transition-all hover:scale-105"
+                    className="flex flex-col items-center gap-3 w-max cursor-pointer transition-all hover:scale-105 "
                   >
-                    <Image src={img} alt="" width={32} height={32} />
-                    <div className=" text-sm lg:text-base font-light text-[#808080]">
+                    <div className="bg-gris-trasparent-card">
+                      <Image src={img} alt="" width={32} height={32} />
+                    </div>
+                    <div className=" text-sm lg:text-base font-light text-[#808080] lg:text-white lg:font-semibold">
                       {title}
                     </div>
                   </div>
@@ -202,7 +203,7 @@ export const Layout = ({ children }: any) => {
           {children}
         </section>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

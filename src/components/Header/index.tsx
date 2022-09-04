@@ -30,47 +30,43 @@ export const Header = () => {
         </div>
         <div
           className={` 
+          overflow-hidden
+          box-content  absolute -top-6 
+          -left-full py-10 lg:p-0 w-0
+          -left-${active ? "-left-5  w-screen" : "-left-full p-0 w-0"} 
+          h-screen bg-black-trasparent text-black 
+          font-bold transition-all duration-500
+          lg:relative lg:top-auto lg:left-0 lg:text-white lg:bg-transparent lg:w-full lg:h-auto
 
-            overflow-hidden
-            box-content  absolute -top-6 
-            -left-${active ? "6" : "full"} 
-
-            p-${active ? "4" : "0"} 
-
-            w-${active ? "screen" : "0"} 
-
-            h-screen bg-blue-300 text-black 
-            font-bold transition-all duration-500
-            lg:relative lg:top-auto lg:left-0 lg:text-white lg:bg-transparent lg:w-full lg:h-auto
-            `}
+          `}
         >
           <nav className="flex flex-col lg:flex-row gap-5 items-center  lg:mr-10 text-lg font-light ">
             <div
-              className="cursor-pointer transition-all hover:scale-105"
+              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-pointer transition-all hover:scale-105"
               onClick={initial}
             >
               Home
             </div>
             <div
-              className="cursor-pointer transition-all hover:scale-105"
+              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-pointer transition-all hover:scale-105 "
               onClick={initial}
             >
               Stays
             </div>
             <div
-              className="cursor-pointe transition-all hover:scale-105"
+              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-pointe transition-all hover:scale-105"
               onClick={initial}
             >
               Flights
             </div>
             <div
-              className="cursor-pointer transition-all hover:scale-105"
+              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-pointer transition-all hover:scale-105"
               onClick={initial}
             >
               Packages
             </div>
             <div
-              className="cursor-pointer transition-all hover:scale-105 w-[60px]"
+              className="p-4 lg:p-0 w-2/4 lg:w-[200px]  text-center text-white cursor-pointer transition-all hover:scale-105 w-[60px]"
               onClick={initial}
             >
               Sing Up
@@ -81,21 +77,3 @@ export const Header = () => {
     </header>
   );
 };
-/*   <header className="z-10 absolute flex justify-between items-center px-10 w-full py-6 ">
-    <div className="text-3xl font-bold cursor-pointer">trxvl.</div>
-    <nav className="flex gap-5 items-center mr-10 text-lg font-light ">
-      <div className="border-blue-100 cursor-pointer transition-all hover:scale-105">
-        Home
-      </div>
-      <div className="cursor-pointer transition-all hover:scale-105">Stays</div>
-      <div className="cursor-pointe transition-all hover:scale-105">
-        Flights
-      </div>
-      <div className="cursor-pointer transition-all hover:scale-105">
-        Packages
-      </div>
-      <div className="cursor-pointer transition-all hover:scale-105">
-        Sing Up
-      </div>
-    </nav>
-  </header> */

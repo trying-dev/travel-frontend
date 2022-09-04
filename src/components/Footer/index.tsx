@@ -2,33 +2,33 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <footer className="hidden  sm:flex gap-[125px] py-[42px] px-[120px] bg-black text-[13px] text-[#808080]">
+    <footer className="flex flex-col md:justify-between md:flex-row gap-10 xl:gap-[125px] py-[42px] px-[50px] xl:px-[120px] bg-black text-[13px] text-[#808080]">
       <p className="text-[32px] font-bold text-white">Trxvl.</p>
-      <div className="flex flex-col gap-[20px]">
-        <div className="flex gap-[165px] ">
-          <div className="flex flex-col gap-4">
+      <div className="flex flex-col  gap-[20px]">
+        <div className="flex flex-col  md:flex-row gap-10  xl:gap-[165px] ">
+          <div className="flex flex-col gap-2 xl:gap-4">
             <div>Seslendirme ve Alt Jazz</div>
             <div>Media Market</div>
             <div>Gillie</div>
             <div>Size Last</div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2 xl:gap-4">
             <div>Self Betimer</div>
             <div>Yatırımcı İlişkileri</div>
             <div>Yasal Hükümler</div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2 xl:gap-4">
             <div>Yardım Merkezi</div>
             <div>İş İmkanları</div>
             <div>Çerez Tercihleri</div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2 xl:gap-4">
             <div>Hediye Kartları</div>
             <div>Kullanım Koşulları</div>
             <div>Kurumsal Bilgiler</div>
           </div>
         </div>
-        <div className="flex justify-between ">
+        <div className="flex flex-col md:flex-row  justify-between items-start gap-6">
           <button className="py-[10px] px-[15px] border-2 border-[#808080]">
             Helment KOD
           </button>

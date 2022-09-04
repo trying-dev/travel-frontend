@@ -10,7 +10,9 @@ module.exports = {
         "montains-blue-card": "url('/assets/images/montains-blue-card.png')",
       },
       colors: {
-        "gris-trasparent": "rgba(255, 255, 255, 0.5)",
+        "gris-trasparent-card": "rgba(255, 255, 255, 0.1)",
+        "gris-trasparent": "rgba(255, 255, 255, 0.4)",
+        "black-trasparent": "rgba(0, 0, 0, 0.75)",
       },
       gridTemplateRows: {
         // Simple 8 row grid
