@@ -4,6 +4,7 @@ import { Header } from "@components/Header";
 import Image from "next/image";
 import { Children } from "react";
 import { Categories } from "./_components/Categories";
+import { Menu_mobile_down } from "./_components/Menu_mobile_down";
 
 export const Layout = ({ children }: any) => {
   return (
@@ -116,7 +117,7 @@ export const Layout = ({ children }: any) => {
                 className="
                   flex justify-center items-center
                   p-3 w-full text-base font-bold
-                  bg-blue-600 rounded-full 
+                  bg-blue-600 rounded-full text-white
                   lg:px-8 lg:bg-white lg:text-blue-600 lg:w-auto
                 "
               >
@@ -131,6 +132,7 @@ export const Layout = ({ children }: any) => {
         </section>
       </main>
       <Footer />
+      <Menu_mobile_down />
     </div>
   );
 };

@@ -10,11 +10,10 @@ export const Header = () => {
 
   const initial = () => {
     setActive(false);
-    console.log(active);
   };
 
   return (
-    <header className="z-10 absolute flex flex-row-reverse lg:flex-row lg:justify-between px-6 pt-6 w-full">
+    <header className="z-[11] absolute flex flex-row-reverse lg:flex-row lg:justify-between px-6 pt-6 w-full">
       <div className=" flex justify-center lg:justify-start w-full text-2xl font-bold text-white">
         Trxvl
       </div>

@@ -71,7 +71,6 @@ export const Categories = () => {
     const window_width = window.innerWidth;
 
     setWidth(window_width);
-    console.log(width);
   }, [width]);
 
   return (
@@ -81,7 +80,6 @@ export const Categories = () => {
       </div>
       <div className="flex gap-6 lg:gap-[55px] ">
         {data.map(({ id, img1, img2, title }) => {
-          console.log("img2 ::", img2);
           return (
             <div
               key={id}
