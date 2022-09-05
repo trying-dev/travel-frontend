@@ -15,7 +15,7 @@ export const Header = () => {
 
   return (
     <header className="z-10 absolute flex flex-row-reverse lg:flex-row lg:justify-between px-6 pt-6 w-full">
-      <div className=" flex justify-center lg:justify-start w-full text-2xl font-bold">
+      <div className=" flex justify-center lg:justify-start w-full text-2xl font-bold text-white">
         Trxvl
       </div>
       {/* Navegacion */}
@@ -66,7 +66,7 @@ export const Header = () => {
               Packages
             </div>
             <div
-              className="p-4 lg:p-0 w-2/4 lg:w-[200px]  text-center text-white cursor-pointer transition-all hover:scale-105 w-[60px]"
+              className="p-4 lg:p-0 w-3/4 lg:w-[200px]  text-center text-white cursor-pointer transition-all hover:scale-105 "
               onClick={initial}
             >
               Sing Up
