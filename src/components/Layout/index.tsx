@@ -3,59 +3,7 @@ import { Header } from "@components/Header";
 
 import Image from "next/image";
 import { Children } from "react";
-
-const data = [
-  {
-    id: 1,
-    img: "/assets/svg/palmeta.svg",
-    title: "Beaches",
-  },
-  {
-    id: 2,
-    img: "/assets/svg/cactus.svg",
-    title: "Deserts",
-  },
-  {
-    id: 3,
-    img: "/assets/svg/montaña.svg",
-    title: "Mountains",
-  },
-  {
-    id: 4,
-    img: "/assets/svg/torre_pizza.svg",
-    title: "Iconic Cities",
-  },
-  {
-    id: 5,
-    img: "/assets/svg/houseboat.svg",
-    title: "Houseboats",
-  },
-  {
-    id: 6,
-    img: "/assets/svg/vereda.svg",
-    title: "Countryside",
-  },
-  {
-    id: 7,
-    img: "/assets/svg/camping.svg",
-    title: "Camping",
-  },
-  {
-    id: 8,
-    img: "/assets/svg/castle.svg",
-    title: "Castles",
-  },
-  {
-    id: 9,
-    img: "/assets/svg/skiing.svg",
-    title: "Skiing",
-  },
-  {
-    id: 10,
-    img: "/assets/svg/palmera_tropical.svg",
-    title: "tropical",
-  },
-];
+import { Categories } from "./_components/Categories";
 
 export const Layout = ({ children }: any) => {
   return (
@@ -178,28 +126,7 @@ export const Layout = ({ children }: any) => {
           </form>
 
           {/* Top Categories */}
-          <div className="z-0 flex flex-col  gap-10 mb-4">
-            <div className="z-[1] font-semibold text-3xl text-black lg:text-white">
-              Top categories
-            </div>
-            <div className="flex gap-6 lg:gap-[55px] ">
-              {data.map(({ id, img, title }) => {
-                return (
-                  <div
-                    key={id}
-                    className="flex flex-col items-center gap-3 w-max cursor-pointer transition-all hover:scale-105 "
-                  >
-                    <div className="bg-gris-trasparent-card">
-                      <Image src={img} alt="" width={32} height={32} />
-                    </div>
-                    <div className=" text-sm lg:text-base font-light text-[#808080] lg:text-white lg:font-semibold">
-                      {title}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+          <Categories />
           {children}
         </section>
       </main>

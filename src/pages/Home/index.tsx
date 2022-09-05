@@ -307,7 +307,7 @@ export const Home = () => {
           </div>
         </div>
         {/* ultima parte home */}
-        <div className="relative -left-[125px] top-[125px] grid grid-cols-[270px_1fr] gap-20 pt-[70px] px-[130px] h-[540px] bg-mountains-blue ">
+        <div className="relative -left-[125px] top-[125px] grid grid-cols-[270px_1fr] gap-20 pt-[70px] px-[130px] h-[540px] bg-mountains-blue text-white">
           {/* Lateral izquierdo */}
           <div className="w-[260px] h-[580px]">
             <Image
@@ -318,7 +318,7 @@ export const Home = () => {
             />
           </div>
           {/* Lateral derecho */}
-          <div className="text-white">
+          <div className="">
             <p className="text-5xl font-semibold ">
               Your all-in-one travel app.
             </p>
