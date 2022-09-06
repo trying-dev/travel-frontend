@@ -26,7 +26,7 @@ export const Layout = ({ children }: any) => {
               gap-5 p-6 pt-[80px] lg:p-[50px] xl:p-[125px] pb-10 w-full
               "
         >
-          <div className="z-0 w-[270px] lg:w-[580px] mt-1 lg:mb-[40px] text-2xl lg:text-7xl font-bold text-white">
+          <div className="z-0 w-[270px] lg:w-[580px] mt-1 lg:mb-[40px] text-2xl lg:text-7xl font-bold text-white cursor-default">
             The Whole world awaits.
           </div>
 

@@ -5,7 +5,7 @@ export const Menu_mobile_down = () => {
   return (
     <div
       className={`
-        z-[10] fixed lg:hidden bottom-0 left-0 right-0 
+        z-[10] fixed md:hidden bottom-0 left-0 right-0 
         flex gap-[36px] justify-center
         p-4
         h-[85px] bg-white text-[#808080] text-xs `}

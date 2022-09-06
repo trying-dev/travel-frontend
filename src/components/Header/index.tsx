@@ -13,8 +13,13 @@ export const Header = () => {
   };
 
   return (
-    <header className="z-[11] absolute flex flex-row-reverse lg:flex-row lg:justify-between px-6 pt-6 w-full">
-      <div className=" flex justify-center lg:justify-start w-full text-2xl font-bold text-white">
+    <header
+      className="
+              z-[11] absolute flex 
+              flex-row-reverse lg:flex-row lg:justify-between 
+              px-6 pt-6 w-full"
+    >
+      <div className=" flex justify-center lg:justify-start w-full text-2xl font-bold text-white cursor-default">
         Trxvl
       </div>
       {/* Navegacion */}
@@ -41,31 +46,31 @@ export const Header = () => {
         >
           <nav className="flex flex-col lg:flex-row gap-5 items-center  lg:mr-10 text-lg font-light ">
             <div
-              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-pointer transition-all hover:scale-105"
+              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-default transition-all hover:scale-105"
               onClick={initial}
             >
               Home
             </div>
             <div
-              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-pointer transition-all hover:scale-105 "
+              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-default transition-all hover:scale-105 "
               onClick={initial}
             >
               Stays
             </div>
             <div
-              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-pointe transition-all hover:scale-105"
+              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-default transition-all hover:scale-105"
               onClick={initial}
             >
               Flights
             </div>
             <div
-              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-pointer transition-all hover:scale-105"
+              className="p-4 lg:p-0 w-2/4 text-center text-white cursor-default transition-all hover:scale-105"
               onClick={initial}
             >
               Packages
             </div>
             <div
-              className="p-4 lg:p-0 w-3/4 lg:w-[200px]  text-center text-white cursor-pointer transition-all hover:scale-105 "
+              className="p-4 lg:p-0 w-3/4 lg:w-[200px]  text-center text-white cursor-default transition-all hover:scale-105 "
               onClick={initial}
             >
               Sing Up

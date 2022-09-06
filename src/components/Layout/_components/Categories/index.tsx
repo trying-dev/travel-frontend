@@ -75,7 +75,7 @@ export const Categories = () => {
 
   return (
     <div className="z-0 flex flex-col  gap-10 mb-4">
-      <div className="z-[1] font-semibold text-3xl text-black lg:text-white">
+      <div className="z-[1] font-semibold text-3xl text-black lg:text-white cursor-default">
         Top categories
       </div>
       <div className="flex gap-6 lg:gap-[55px] ">
@@ -83,7 +83,7 @@ export const Categories = () => {
           return (
             <div
               key={id}
-              className="flex flex-col items-center gap-3 w-max cursor-pointer transition-all hover:scale-105 "
+              className="flex flex-col items-center gap-3 w-max cursor-default transition-all hover:scale-105 "
             >
               <div className="">
                 {width >= 1023 ? (

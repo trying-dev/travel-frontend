@@ -11,7 +11,7 @@ export const Tarjeta = ({ info }: any) => {
           height={200}
           className="rounded-lg"
         />
-        <div className="z-0 absolute top-0 right-2 cursor-pointer">
+        <div className="z-0 absolute top-0 right-2 cursor-default">
           <Image
             src="/assets/svg/heart.svg"
             alt="heart"

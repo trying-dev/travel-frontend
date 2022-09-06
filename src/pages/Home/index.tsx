@@ -181,7 +181,7 @@ export const Home = () => {
         {/* Top Vacation destination */}
         <div className="relative w-full h-[270px]">
           <div className="z-0 absolute flex flex-col gap-8 w-auto">
-            <div className="z-0 lg:text-white font-semibold text-3xl w-auto">
+            <div className="z-0 lg:text-white font-semibold text-3xl w-auto cursor-default">
               Top Vacation Destinations
             </div>
             <div className="flex gap-5">
@@ -189,7 +189,7 @@ export const Home = () => {
                 return (
                   <div
                     key={id}
-                    className="relative w-[310px] h-[200px] cursor-pointer transition-all duration-500 hover:scale-105"
+                    className="relative w-[310px] h-[200px] cursor-default transition-all duration-500 hover:scale-105"
                   >
                     <Image
                       src={img}
@@ -210,13 +210,13 @@ export const Home = () => {
 
         {/* Offers */}
         <div className="z-0 relative flex flex-col gap-8 ">
-          <div className=" font-semibold text-black text-3xl w-auto">
+          <div className=" font-semibold text-black text-3xl w-auto cursor-default">
             Offers
           </div>
           <div className="flex gap-5">
             {offers.map(({ id, company, description, comment, img }) => (
               <div
-                className="flex gap-6 p-6 w-[680px]  text-black rounded-2xl shadow-md cursor-pointer transition-all duration-500 
+                className="flex gap-6 p-6 w-[680px]  text-black rounded-2xl shadow-md cursor-default transition-all duration-500 
                     hover:scale-[1.005]"
                 key={id}
               >
@@ -235,7 +235,7 @@ export const Home = () => {
                               bg-[#2659C3] p-4   w-[140px] 
                               text-white text-base rounded-full
                                 shadow-md
-                                cursor-pointer transition-all duration-500 
+                                cursor-default transition-all duration-500 
                                 hover:scale-105 hover:shadow-lg
                                 "
                   >
@@ -249,14 +249,14 @@ export const Home = () => {
 
         {/* Browse property */}
         <div className="z-0 flex flex-col  gap-10 mb-4">
-          <div className="font-semibold text-3xl text-black">
+          <div className="font-semibold text-3xl text-black cursor-default">
             Browse by property type
           </div>
           <div className="flex gap-[55px]">
             {browse_type.map(({ id, name, img }) => (
               <div
                 key={id}
-                className="relative w-[310px] h-[200px] cursor-pointer transition-all duration-500 hover:scale-105"
+                className="relative w-[310px] h-[200px] cursor-default transition-all duration-500 hover:scale-105"
               >
                 <Image
                   src={img}
@@ -265,30 +265,40 @@ export const Home = () => {
                   height={200}
                   className=" rounded-md w-[310px] h-[200px]"
                 />
-                <div className="absolute bottom-7 left-6">{name}</div>
+                <div className="absolute bottom-7 left-6 text-white">
+                  {name}
+                </div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Plan trip */}
-        <div className="flex flex-col gap-6 p-20 h-[400px] w-full bg-hero-map-trip rounded-3xl">
-          <p className="w-[640px] text-[56px] leading-[64.39px] font-semibold">
+        <div
+          className="
+              flex flex-col gap-6 
+              p-20 h-[400px] w-full xl:w-[1125px] 
+              bg-hero-map-trip bg-no-repeat rounded-3xl 
+              text-white"
+        >
+          <p className="w-[640px] text-[56px] leading-[64.39px] font-semibold cursor-default">
             Plan your trip with travel expert
           </p>
-          <p>Our professional advisors can craft your perfect itinerary</p>
+          <p className="cursor-default">
+            Our professional advisors can craft your perfect itinerary
+          </p>
         </div>
 
         {/* Connect with other travelers */}
         <div className="text-black">
-          <p className=" font-semibold">
+          <p className=" font-semibold cursor-default">
             Connect with travelers in our community
           </p>
           <div className="flex gap-6 ">
             {other_trip.map(({ id, title, coment, travelers, img }) => (
               <div
                 key={id}
-                className="p-4 rounded-2xl shadow-md transition-all hover:scale-105 cursor-pointer "
+                className="p-4 rounded-2xl shadow-md transition-all hover:scale-105 cursor-default "
               >
                 <div className="w-[310px] h-[200px] rounded-lg ">
                   <Image
@@ -307,7 +317,13 @@ export const Home = () => {
           </div>
         </div>
         {/* ultima parte home */}
-        <div className="relative -left-[125px] top-[125px] grid grid-cols-[270px_1fr] gap-20 pt-[70px] px-[130px] h-[540px] bg-mountains-blue text-white">
+        <div
+          className="
+              relative -left-[125px] top-[125px] 
+              grid grid-cols-[270px_1fr] gap-20 
+              pt-[70px] px-[130px] h-[540px] xl:w-screen
+              bg-mountains-blue bg-no-repeat xl:bg-cover text-white"
+        >
           {/* Lateral izquierdo */}
           <div className="w-[260px] h-[580px]">
             <Image
@@ -331,7 +347,7 @@ export const Home = () => {
             <div className="flex justify-between w">
               <div className="flex flex-col gap-4">
                 <div className=" flex items-center gap-6 mb-4 text-xl">
-                  <p className="bg-gris-trasparent py-2 px-4 rounded-2xl cursor-pointer">
+                  <p className="bg-gris-trasparent py-2 px-4 rounded-2xl cursor-default">
                     Mobile
                   </p>
                   <p className="cursor pinter"> Email</p>
@@ -346,12 +362,21 @@ export const Home = () => {
                     placeholder="+91 Movile number"
                     className="px-4 w-full h-[60px] bg-gris-trasparent placeholder:text-white text-base rounded-2xl"
                   />
-                  <button className="absolute top-[6px] right-4 py-3 px-16 bg-white text-base text-[#2659C3] font-semibold rounded-full cursor-pointer">
+                  <button className="absolute top-[6px] right-4 py-3 px-16 bg-white text-base text-[#2659C3] font-semibold rounded-full cursor-default">
                     Search
                   </button>
                 </div>
               </div>
-              <div className="relative flex justify-center items-center w-1 after:content-[''] after:absolute after:top-[0px] after:w-[1px] after:h-[70px] after:text-center  after:bg-white before:content-[''] before:absolute before:-bottom-[10px] before:w-[1px] before:h-[70px] before:text-center  before:bg-white">
+              <div
+                className="
+                    relative flex justify-center 
+                    items-center w-1 after:content-[''] text-xl
+                    after:absolute after:top-[0px] after:w-[1px] 
+                    after:h-[70px] after:text-center  after:bg-white 
+                    before:content-[''] before:absolute before:-bottom-[10px] 
+                    before:w-[1px] before:h-[70px] before:text-center  
+                    before:bg-white"
+              >
                 or
               </div>
               <div className="flex flex-col justify-center items-center gap-4">
